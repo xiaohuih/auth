@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.152.0](https://github.com/supabase/auth/compare/v2.151.0...v2.152.0) (2024-05-08)
+
+
+### Features
+
+* update openapi spec with identity and is_anonymous fields ([#1573](https://github.com/supabase/auth/issues/1573)) ([86a79df](https://github.com/supabase/auth/commit/86a79df9ecfcf09fda0b8e07afbc41154fbb7d9d))
+
+
+### Bug Fixes
+
+* use api_external_url domain as localname ([#1575](https://github.com/supabase/auth/issues/1575)) ([ed2b490](https://github.com/supabase/auth/commit/ed2b4907244281e4c54aaef74b1f4c8a8e3d97c9))
+
 ## [2.151.0](https://github.com/supabase/auth/compare/v2.150.1...v2.151.0) (2024-05-06)
 
 
