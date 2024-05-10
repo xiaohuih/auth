@@ -56,6 +56,10 @@ func TestSmsProvider(t *testing.T) {
 					ApiKey: "test_api_key",
 					Sender: "test_sender",
 				},
+				Aliyun: conf.AliyunProviderConfiguration{
+					ApiKey:    "test_api_key",
+					ApiSecret: "test_api_secret",
+				},
 			},
 		},
 	}
