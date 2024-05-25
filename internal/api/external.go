@@ -176,9 +176,9 @@ func (a *API) internalExternalProviderCallback(w http.ResponseWriter, r *http.Re
 	}
 
 	userData := data.userData
-	if len(userData.Emails) <= 0 {
-		return internalServerError("Error getting user email from external provider")
-	}
+	// if len(userData.Emails) <= 0 {
+	// 	return internalServerError("Error getting user email from external provider")
+	// }
 	userData.Metadata.EmailVerified = false
 	for _, email := range userData.Emails {
 		if email.Primary {
@@ -566,6 +566,8 @@ func (a *API) Provider(ctx context.Context, name string, scopes string) (provide
 		return provider.NewWorkOSProvider(config.External.WorkOS)
 	case "zoom":
 		return provider.NewZoomProvider(config.External.Zoom)
+	case "wechat":
+		return provider.NewWechatProvider(config.External.Wechat, scopes)
 	default:
 		return nil, fmt.Errorf("Provider %s could not be found", name)
 	}

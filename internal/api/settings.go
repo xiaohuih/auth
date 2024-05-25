@@ -27,6 +27,7 @@ type ProviderSettings struct {
 	Email          bool `json:"email"`
 	Phone          bool `json:"phone"`
 	Zoom           bool `json:"zoom"`
+	Wechat         bool `json:"wechat"`
 }
 
 type Settings struct {
@@ -68,6 +69,7 @@ func (a *API) Settings(w http.ResponseWriter, r *http.Request) error {
 			Email:          config.External.Email.Enabled,
 			Phone:          config.External.Phone.Enabled,
 			Zoom:           config.External.Zoom.Enabled,
+			Wechat:         config.External.Wechat.Enabled,
 		},
 		DisableSignup:     config.DisableSignup,
 		MailerAutoconfirm: config.Mailer.Autoconfirm,
